@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/celebrations.css">
+</head>
+
+<body>
+
+<div class="game-container">
+
+  <header class="score-header">
+    <div class="title">
+      ROCK <br> PAPER <br> SCISSORS
+    </div>
+
+    <div class="score-board">
+      <div class="score-box">
+        <p>COMPUTER SCORE</p>
+        <h2 id="computerScore">0</h2>
+      </div>
+      <div class="score-box">
+        <p>YOUR SCORE</p>
+        <h2 id="playerScore">0</h2>
+      </div>
+    </div>
+  </header>
+
+  <!-- GAME VIEW -->
+  <section id="gameView" class="view">
+    <div class="triangle-line"></div>
+
+    <button class="choice rock" data-choice="rock">✊</button>
+    <button class="choice paper" data-choice="paper">✋</button>
+    <button class="choice scissors" data-choice="scissors">✌</button>
+  </section>
+
+  <!-- RESULT VIEW -->
+  <section id="resultView" class="view hidden">
+
+    <div class="picked-block">
+      <p>YOU PICKED</p>
+      <div id="playerPick" class="pick-circle"></div>
+    </div>
+
+    <div class="result-center">
+      <h2 id="resultText"></h2>
+      <button id="playAgainBtn" class="btn-primary">PLAY AGAIN</button>
+    </div>
+
+    <div class="picked-block">
+      <p>PC PICKED</p>
+      <div id="computerPick" class="pick-circle"></div>
+    </div>
+
+  </section>
+
+  <!-- HURRAY VIEW -->
+  <section id="hurrayView" class="view hidden">
+    <div class="trophy">🏆</div>
+    <h1>HURRAY!!</h1>
+    <p>YOU WON THE GAME</p>
+    <button id="hurrayPlayBtn" class="btn-primary">PLAY AGAIN</button>
+  </section>
+
+  <!-- RULES BUTTON -->
+  <button class="rules-btn" id="rulesBtn">RULES</button>
+
+</div>
+
+<!-- RULES MODAL -->
+<div class="modal hidden" id="rulesModal">
+  <div class="modal-content">
+    <h3>Game Rules</h3>
+    <ul>
+      <li>Rock beats Scissors</li>
+      <li>Scissors beats Paper</li>
+      <li>Paper beats Rock</li>
+    </ul>
+    <button id="closeModal">CLOSE</button>
+  </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/game.js"></script>
+<script src="js/modal.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+
+.hidden {
+  display: none !important;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #8cc461;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.game-container {
+  height: 100vh;
+  width: 100%;
+}

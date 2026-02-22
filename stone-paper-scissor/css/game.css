@@ -1,0 +1,211 @@
+/* HEADER */
+
+.score-header {
+  width: 750px;
+  margin: 40px auto;
+  padding: 25px 40px;
+  border: 2px solid white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.title {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.score-board {
+  display: flex;
+  gap: 15px;
+}
+
+.score-box {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 120px;
+}
+.score-box h2 {
+  font-size: 35px;
+  margin: 5px 0 0;
+}
+
+/* VIEWS */
+
+.view {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* GAME SCREEN */
+
+#gameView {
+  flex-direction: column;
+}
+
+.choice {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: white;
+  font-size: 50px;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  box-shadow: inset 0 5px 8px rgba(0,0,0,0.2);
+}
+
+.choice {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.choice:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 6px 10px rgba(0,0,0,0.25);
+}
+/* .choice:hover {
+  transform: scale(1.1);
+} */
+ 
+.triangle-lines::before,
+.triangle-lines::after {
+  content: "";
+  position: absolute;
+  background: #324723;
+  width: 180px;
+  height: 6px;
+}
+
+.triangle-lines::before {
+  top: 155px;
+  left: 33%;
+  transform: rotate(60deg);
+}
+
+.triangle-lines::after {
+  top: 155px;
+  right: 33%;
+  transform: rotate(-60deg);
+}
+
+.rock {
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 14px solid #0074B6;
+}
+
+.paper {
+  top: 80px;
+  left: 30%;
+  border: 14px solid #BD00FF;
+}
+
+.scissors {
+  top: 80px;
+  right: 30%;
+  border: 14px solid #FFA943;
+}
+
+/* RESULT SCREEN */
+
+#resultView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  color: white;
+}
+
+.picked-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pick-circle {
+  width: 170px;
+  height: 170px;
+  background: white;
+  border-radius: 50%;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 15px;
+}
+
+.result-center {
+  text-align: center;
+}
+
+.result-center h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* HURRAY SCREEN */
+
+#hurrayView {
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+#hurrayView h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+#hurrayView p {
+  font-size: 22px;
+}
+
+/* BUTTONS */
+
+.btn-primary {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.rules-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 20px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.rules-btn:hover {
+  background: white;
+  color: #8cc461;
+}
+.view {
+  transition: opacity 0.4s ease;
+}
